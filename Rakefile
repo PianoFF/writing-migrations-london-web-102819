@@ -22,4 +22,10 @@ namespace :db do
     File.delete('db/schema.rb')
     drop_db
   end
+
+  task :console do
+    require 'irb'
+    ARGV.clear
+    IRB.start
+  end
 end
